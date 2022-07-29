@@ -7,3 +7,12 @@ steps:
       - --context=./angular-tour-of-heroes
       - --cache=true
       - --cache-ttl=240h
+
+  - name: "gcr.io/cloud-builders/gcloud-slim"
+    id: Gcloud-Auth
+    entrypoint: "bash"
+    args:
+      - "-c"
+      - |
+        gcloud container clusters get-credentials primary-cluster --region us-central1 --project timing-terra
+
