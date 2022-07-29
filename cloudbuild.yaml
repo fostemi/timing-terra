@@ -16,3 +16,17 @@ steps:
       - |
         gcloud container clusters get-credentials primary-cluster --region us-central1 --project timing-terra
 
+  - name: "gcr.io/walker-cpl/helm"
+    id: Helm-Upgrade
+    entrypoint: "bash"
+    args:
+      - "-c"
+      - |
+        helm upgrade -i ${_APP_NAME} charts -n ${_APP_NAME} --create-namespace --set app_name=${_APP_NAME} --set google.domain=${_DOMAIN} --set google.project=$PROJECT_ID --set image.tag=$COMMIT_SHA
+    env:
+      - "CLOUDSDK_COMPUTE_ZONE=${_ZONE}"
+      - "CLOUDSDK_CONTAINER_CLUSTER=${_CLUSTER}"
+
+timeout: 1200s
+options:
+  machineType: E2_HIGHCPU_8
