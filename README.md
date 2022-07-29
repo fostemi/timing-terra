@@ -9,3 +9,5 @@ Running application:
 - Api enabling in terraform
 - Copy code from templated repo
 - Service account creation
+- Confirm and apply run in terraform
+- Automate connecting to repo in cb
