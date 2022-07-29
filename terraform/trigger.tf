@@ -16,7 +16,7 @@ resource "google_cloudbuild_trigger" "cloudbuild_triggers" {
   }
   ignored_files = [".gitignore", "*.tf"]
   
-  filename  = "cloudbuild.yaml"
+  filename  = "../cloudbuild.yaml"
 
   substitutions = {
     _APP_NAME = each.key
