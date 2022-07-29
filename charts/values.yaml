@@ -1,0 +1,7 @@
+
+projectID: forming-the-terra-1
+imageTag: latest
+domain: mike.igniteme.dev
+
+angular:
+  containerPort: 80
