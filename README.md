@@ -3,7 +3,7 @@ Start: 0:00
 Create Project: null
 Create Repo and Workspace: null
 Provision GCP resources: 28:50  
-Running application: 
+Running application: 1:00:53 
 
 ## Ways to reduce toil
 - Api enabling in terraform
@@ -11,3 +11,4 @@ Running application:
 - Service account creation
 - Confirm and apply run in terraform
 - Automate connecting to repo in cb
+- Cluster connection and cloudbuild templating
